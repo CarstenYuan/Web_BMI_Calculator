@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-family: AppleSystemUIFont;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -59,20 +60,21 @@ table {
     background: #424242;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 300px;
 }
 
 .logoBMI {
-    margin: 90px 48px;
+    margin: 0 48px;
 }
 
 .inputData {
-    margin: 90px 48px;
+    margin: 0 48px;
 }
 
 .inputContent {
-    font: 18px;
+    font-size: 20px;
     color: #FFD366;
     margin-left: 10px;
 }
@@ -80,23 +82,34 @@ table {
 .inputHeight {
     width: 210px;
     border: #FFD366 solid 2px;
-    border-radius: 30px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 10px 20px;
     margin: 10px;
     font-size: 18px;
+    background: rgb(100, 100, 100);
+    line-height: 20px;
+    color: #fff;
 }
 
 .inputWeight {
     width: 210px;
     border: #FFD366 solid 2px;
-    border-radius: 30px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 10px 20px;
     margin: 10px;
     font-size: 18px;
+    background: rgb(100, 100, 100);
+    line-height: 20px;
+    color: #fff;
+}
+
+::placeholder {
+    font-family: AppleSystemUIFont;
+    color: rgb(176, 176, 176)
 }
 
 .sendData {
-    margin: 90px 48px;
+    margin: 0 48px;
 }
 .sendBtn{
     width: 120px;
@@ -105,10 +118,16 @@ table {
     border-radius: 90px;
     text-align: center;
     line-height: 120px;
+    cursor: pointer;
 }
 
 .sendBtn:hover{
     box-shadow: 0px 0px 20px #FFC431;
+}
+
+.sendBtn:active{
+    background: #DEA921;
+    box-shadow: none;
 }
 
 .sendBtnText{
@@ -125,9 +144,9 @@ table {
     height: 100%;
 }
 
-.dataTitle{
+.listTitle{
     margin: auto;
-    padding: 40px 0 20px 0;
+    padding: 20px 0;
     color: #424242;
     font-size: 36px;
     text-align: center;
@@ -135,7 +154,7 @@ table {
 
 
 .resultBar {
-    width: 617px;
+    width: 807px;
     margin: auto;
 }
 
@@ -147,6 +166,16 @@ table {
 .resultShow{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.currentTime{
+    width: 25%;
+    text-align: center;
+    line-height: 62px;
+    font-size: 12px;
+    color: #4A4A4A;
+    margin: 0 21px;
 }
 
 /* 分類 */
@@ -158,12 +187,56 @@ table {
     float: left;
 }
 
-
-.resultTemp1{
-    text-align: center;
+.resultTitle1{
+    width: 15%;
+    text-align: left;
     line-height: 62px;
     font-size: 20px;
     color: #4A4A4A;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.resultHeight1{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultWeight1{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultBMI1{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+
+.resultUnit1{
+    width: 50%;
+    text-align: right;
+    line-height: 62px;
+    font-size: 12px;
+    color: #4A4A4A;
+}
+
+.resultFigure1{
+    width: 50%;
+    text-align: left;
+    line-height: 62px;
+    font-size: 20px;
+    color: #4A4A4A;
+    margin: 0 20px 0 7px;
 }
 
 
@@ -175,13 +248,59 @@ table {
     float: left;
 }
 
-
-.resultTemp2{
-    text-align: center;
+.resultTitle2{
+    width: 15%;
+    text-align: left;
     line-height: 62px;
     font-size: 20px;
     color: #4A4A4A;
+    padding-left: 20px;
+    font-weight: bold;
 }
+
+.resultHeight2{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultWeight2{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultBMI2{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+
+.resultUnit2{
+    width: 50%;
+    text-align: right;
+    line-height: 62px;
+    font-size: 12px;
+    color: #4A4A4A;
+}
+
+.resultFigure2{
+    width: 50%;
+    text-align: left;
+    line-height: 62px;
+    font-size: 20px;
+    color: #4A4A4A;
+    margin: 0 20px 0 7px;
+}
+
+
 
 /* 過重 */
 .resultColor3{
@@ -191,12 +310,56 @@ table {
     float: left;
 }
 
-
-.resultTemp3{
-    text-align: center;
+.resultTitle3{
+    width: 15%;
+    text-align: left;
     line-height: 62px;
     font-size: 20px;
     color: #4A4A4A;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.resultHeight3{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultWeight3{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultBMI3{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+
+.resultUnit3{
+    width: 50%;
+    text-align: right;
+    line-height: 62px;
+    font-size: 12px;
+    color: #4A4A4A;
+}
+
+.resultFigure3{
+    width: 50%;
+    text-align: left;
+    line-height: 62px;
+    font-size: 20px;
+    color: #4A4A4A;
+    margin: 0 20px 0 7px;
 }
 
 /* 輕度肥胖 */
@@ -207,12 +370,56 @@ table {
     float: left;
 }
 
-
-.resultTemp4{
-    text-align: center;
+.resultTitle4{
+    width: 15%;
+    text-align: left;
     line-height: 62px;
     font-size: 20px;
     color: #4A4A4A;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.resultHeight4{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultWeight4{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultBMI4{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+
+.resultUnit4{
+    width: 50%;
+    text-align: right;
+    line-height: 62px;
+    font-size: 12px;
+    color: #4A4A4A;
+}
+
+.resultFigure4{
+    width: 50%;
+    text-align: left;
+    line-height: 62px;
+    font-size: 20px;
+    color: #4A4A4A;
+    margin: 0 20px 0 7px;
 }
 
 /* 中度肥胖 */
@@ -223,12 +430,56 @@ table {
     float: left;
 }
 
-
-.resultTemp5{
-    text-align: center;
+.resultTitle5{
+    width: 15%;
+    text-align: left;
     line-height: 62px;
     font-size: 20px;
     color: #4A4A4A;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.resultHeight5{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultWeight5{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultBMI5{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+
+.resultUnit5{
+    width: 50%;
+    text-align: right;
+    line-height: 62px;
+    font-size: 12px;
+    color: #4A4A4A;
+}
+
+.resultFigure5{
+    width: 50%;
+    text-align: left;
+    line-height: 62px;
+    font-size: 20px;
+    color: #4A4A4A;
+    margin: 0 20px 0 7px;
 }
 
 /* 重度肥胖 */
@@ -239,16 +490,56 @@ table {
     float: left;
 }
 
-
-.resultTemp6{
-    text-align: center;
+.resultTitle6{
+    width: 15%;
+    text-align: left;
     line-height: 62px;
     font-size: 20px;
     color: #4A4A4A;
+    padding-left: 20px;
+    font-weight: bold;
 }
 
-.nameData{
+.resultHeight6{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultWeight6{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+.resultBMI6{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 21px;
+}
+
+
+.resultUnit6{
+    width: 50%;
+    text-align: right;
+    line-height: 62px;
     font-size: 12px;
+    color: #4A4A4A;
+}
+
+.resultFigure6{
+    width: 50%;
+    text-align: left;
+    line-height: 62px;
+    font-size: 20px;
+    color: #4A4A4A;
+    margin: 0 20px 0 7px;
 }
 
 
