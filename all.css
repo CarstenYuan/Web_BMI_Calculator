@@ -136,9 +136,12 @@ table {
 
 .resultBar {
     width: 617px;
-    height: 62px;
+    margin: auto;
+}
+
+.resultBar li{
+    margin: 20px;
     background: white;
-    margin: 20px auto;
 }
 
 .resultShow{
