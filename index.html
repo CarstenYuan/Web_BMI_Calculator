@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 輸入區 -->
+        <div>
+            <div class="head">
+                <div class="logoBMI">
+                    <img src="BMICLogo.png">
+                </div>
+                <div class="inputData">
+                    <div>
+                        <div class="inputContent">身高 cm</div>
+                        <input type="text" placeholder="請輸入身高" class="inputHeight" oninput = "value=value.replace(/[^\d]/g,'')">
+                        <!-- oninput = "value=value.replace(/[^\d]/g,'')" 用來規定只能輸入數字 -->
+                    </div>
+
+                    <div>
+                        <div class="inputContent">體重 kg</div>
+                        <input type="text" placeholder="請輸入體重" class="inputWeight" oninput = "value=value.replace(/[^\d]/g,'')">
+                    </div>
+                </div>
+                <div class="sendData">
+                    <!-- <input type="button" class="sendBtn" value="看結果"> -->
+                    <div class="sendBtn">
+                        <span class="sendBtnText">看結果</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 資料區 -->
+        <div class="resultArea">
+            <div class="dataTitle">BMI 紀錄</div>
+            <div class="resultBar">
+                <div class="resultColor1"></div>
+                <div class="resultShow">
+                    <div class="resultTemp1">理想</div>
+                    <div class="resultTemp1">Height 180cm</div>
+                    <div class="resultTemp1">Weight 70kg</div>
+                    <div class="resultTemp1">BMI 20.90</div>
+                </div>
+            </div>
+            <div class="resultBar">
+                    <div class="resultColor2"></div>
+                    <div class="resultShow">
+                        <div class="resultTemp2">過輕</div>
+                        <div class="resultTemp2">Height 180cm</div>
+                        <div class="resultTemp2">Weight 40kg</div>
+                        <div class="resultTemp2">BMI 11.94</div>
+                    </div>
+            </div>
+
+            <div class="resultBar">
+                    <div class="resultColor3"></div>
+                    <div class="resultShow">
+                        <div class="resultTemp3">過重</div>
+                        <div class="resultTemp3">Height 180cm</div>
+                        <div class="resultTemp3">Weight 40kg</div>
+                        <div class="resultTemp3">BMI 11.94</div>
+                    </div>
+            </div>
+
+            <div class="resultBar">
+                    <div class="resultColor4"></div>
+                    <div class="resultShow">
+                        <div class="resultTemp4">輕度肥胖</div>
+                        <div class="resultTemp4">Height 180cm</div>
+                        <div class="resultTemp4">Weight 40kg</div>
+                        <div class="resultTemp4">BMI 11.94</div>
+                    </div>
+            </div>
+
+            <div class="resultBar">
+                    <div class="resultColor5"></div>
+                    <div class="resultShow">
+                        <div class="resultTemp5">中度肥胖</div>
+                        <div class="resultTemp5">Height 180cm</div>
+                        <div class="resultTemp5">Weight 40kg</div>
+                        <div class="resultTemp5">BMI 11.94</div>
+                    </div>
+            </div>
+
+            <div class="resultBar">
+                    <div class="resultColor6"></div>
+                    <div class="resultShow">
+                        <div class="resultTemp6">重度肥胖</div>
+                        <div class="resultTemp6">Height 180cm</div>
+                        <div class="resultTemp6">Weight 40kg</div>
+                        <div class="resultTemp6">BMI 11.94</div>
+                    </div>
+            </div>
+        </div>
+        <!-- 底部Bar -->
+        <div class="bottomBar">
+            <div class="logoBottom">    
+                <img class="pic" src="BMICLogo.png" style="width: 55px; height: 55px;">
+            </div>
+        </div>
+    </div>
+    <script src="all.js"></script>
+</body>
+</html>
