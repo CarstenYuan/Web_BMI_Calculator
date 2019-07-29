@@ -154,7 +154,7 @@ table {
 }
 
 .sendBtnText{
-    color: #424242 ;
+    color: #424242;
     width: 73px;
     height: 24px;
     font-size: 24px;
@@ -166,6 +166,7 @@ table {
     margin-left: 15px;
     /* border: 1px solid white; */
 }
+
 
 /* 按鈕效果，點選後變換樣式 */
 /* 理想 */
@@ -612,8 +613,9 @@ table {
 
 
 .resultBar {
-    width: 807px;
+    width: 907px;
     margin: auto;
+    overflow: hidden;
 }
 
 .resultBar li{
@@ -636,6 +638,16 @@ table {
     margin: 0 21px;
 }
 
+.deleteBtn{
+    width: 24px;
+    border: black solid 1px;
+    border-radius: 90px;
+    text-align: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+
 /* 分類 */
 /* 理想 */
 .resultColor1{
@@ -646,7 +658,7 @@ table {
 }
 
 .resultTitle1{
-    width: 15%;
+    width: 18%;
     text-align: left;
     line-height: 62px;
     font-size: 20px;
@@ -707,7 +719,7 @@ table {
 }
 
 .resultTitle2{
-    width: 15%;
+    width: 18%;
     text-align: left;
     line-height: 62px;
     font-size: 20px;
@@ -769,7 +781,7 @@ table {
 }
 
 .resultTitle3{
-    width: 15%;
+    width: 18%;
     text-align: left;
     line-height: 62px;
     font-size: 20px;
@@ -829,7 +841,7 @@ table {
 }
 
 .resultTitle4{
-    width: 15%;
+    width: 18%;
     text-align: left;
     line-height: 62px;
     font-size: 20px;
@@ -889,7 +901,7 @@ table {
 }
 
 .resultTitle5{
-    width: 15%;
+    width: 18%;
     text-align: left;
     line-height: 62px;
     font-size: 20px;
@@ -949,7 +961,7 @@ table {
 }
 
 .resultTitle6{
-    width: 15%;
+    width: 18%;
     text-align: left;
     line-height: 62px;
     font-size: 20px;
@@ -1018,6 +1030,12 @@ table {
     margin: auto;
     /* border: solid 2px #424242; */
 }
+
+/* .pic {
+    background-image: url("BMICLogo.png"), linear-gradient(#424242, #424242);
+    background-blend-mode: lighten;
+    background-size: cover;
+} */
 
 .pic {
     width: 55px;
