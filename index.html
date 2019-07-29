@@ -13,26 +13,27 @@
         <div>
             <div class="head">
                 <div class="logoBMI">
+                    <div class="fixBMIlocation"></div>
                     <img src="BMICLogo.png">
                 </div>
                 <div class="inputData">
                     <div>
                         <div class="inputContent">身高 cm</div>
-                        <input type="text" placeholder="請輸入身高" class="inputHeight" oninput = "value=value.replace(/[^\d]/g,'')">
-                        <!-- oninput = "value=value.replace(/[^\d]/g,'')" 用來規定只能輸入數字 -->
+                        <input type="text" placeholder="請輸入身高" class="inputHeight" oninput ="decimalPoint(this)">
                     </div>
 
                     <div>
                         <div class="inputContent">體重 kg</div>
-                        <input type="text" placeholder="請輸入體重" class="inputWeight" oninput = "value=value.replace(/[^\d]/g,'')">
+                        <input type="text" placeholder="請輸入體重" class="inputWeight" oninput ="decimalPoint(this)">
                     </div>
                 </div>
                 <div class="sendData">
-                    <!-- <input type="button" class="sendBtn" value="看結果"> -->
                     <div class="sendBtn">
                         <span class="sendBtnText">看結果</span>
                     </div>
+                    <div class="fixBtnlocation"></div>
                 </div>
+
             </div>
         </div>
         <!-- 資料區 -->
