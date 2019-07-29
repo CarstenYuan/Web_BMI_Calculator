@@ -1020,7 +1020,8 @@ table {
 }
 
 .pic {
-    background-image: url("BMICLogo.png"), linear-gradient(#424242, #424242);
-    background-blend-mode: lighten;
-    background-size: cover;
+    width: 55px;
+    height: 55px;
+    filter: brightness(35%);
+    -webkit-filter: brightness(35%);
 }

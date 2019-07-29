@@ -1,4 +1,4 @@
-var send = document.querySelector('.sendBtn');
+var send = document.querySelector('.sendData');
 var inputHeight = document.querySelector('.inputHeight');
 var inputWeight = document.querySelector('.inputWeight');
 
@@ -186,15 +186,5 @@ function updateBTN(){
             str = '<div class="sendBtn6"><div class="sendBtnBMI6">'+ BMI +'</div><div class="sendBtnText6">BMI</div><div class="sendBtnImg6 refreshBtn" ><img src="icons_loop.png"></div></div><div class="fixBtnlocation6">重度肥胖</div>'
         };
 
-    changeBtn.innerHTML = str;
-    
-    // 返回計算按鈕的樣式
-    var refreshBtn = document.querySelector('.refreshBtn');
-    refreshBtn.addEventListener('click', refreshPage);
-}
-
-// 變更樣式的右下角有返回按鈕，返回至計算結果按鈕的樣式
-function refreshPage(){
-    str = '<div class="sendBtn"><span class="sendBtnText">看結果</span></div><div class="fixBtnlocation"></div>'
     changeBtn.innerHTML = str;
 }
