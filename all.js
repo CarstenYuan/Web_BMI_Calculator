@@ -86,7 +86,7 @@ function updateList(itmes){
         }
         // 重度肥胖 6
         else if (temp > 35){
-            content = '<li style="border-color: #FF1200;"><div>重度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ Height +'kg</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
+            content = '<li style="border-color: #FF1200;"><div>重度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'kg</h2></div><div><p>Height</p><h2>'+ weight +'cm</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
         };
 
         str += content;
