@@ -66,27 +66,27 @@ function updateList(itmes){
 
         // 過輕 2
         if (temp < 18.5){
-            content = '<li style="border-color: #31BAF9;"><div>過輕</div><div><p>BMI </p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
+            content = '<li style="border-color: #31BAF9;"><div>過輕</div><div><p>BMI </p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn" data-num="'+ i +'">Delete</a></li>'
         }
         // 理想 1
         else if (temp >= 18.5 && temp < 24){
-            content = '<li style="border-color: #86D73F;"><div>理想</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
+            content = '<li style="border-color: #86D73F;"><div>理想</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn" data-num="'+ i +'">Delete</a></li>'
         }
         // 過重 3
         else if (temp >= 24 && temp < 27){
-            content = '<li style="border-color: #FF982D;"><div>過重</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
+            content = '<li style="border-color: #FF982D;"><div>過重</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn" data-num="'+ i +'">Delete</a></li>'
         }
         // 輕度肥胖 4
         else if (temp >= 27 && temp < 30){
-            content = '<li style="border-color: #FF6C03;"><div>輕度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
+            content = '<li style="border-color: #FF6C03;"><div>輕度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn" data-num="'+ i +'">Delete</a></li>'
         }
         // 中度肥胖 5
         else if (temp >= 30 && temp < 35){
-            content = '<li style="border-color: #FF6C03;"><div>中度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
+            content = '<li style="border-color: #FF6C03;"><div>中度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn" data-num="'+ i +'">Delete</a></li>'
         }
         // 重度肥胖 6
         else if (temp > 35){
-            content = '<li style="border-color: #FF1200;"><div>重度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'kg</h2></div><div><p>Height</p><h2>'+ weight +'cm</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
+            content = '<li style="border-color: #FF1200;"><div>重度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'kg</h2></div><div><p>Height</p><h2>'+ weight +'cm</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn" data-num="'+ i +'">Delete</a></li>'
         };
 
         str += content;
