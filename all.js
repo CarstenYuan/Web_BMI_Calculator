@@ -1,12 +1,12 @@
 // DOM元素
-var send = document.querySelector('.sendData'); // 按下按鈕
+var send = document.querySelector('.send'); // 按下按鈕
 var inputHeight = document.querySelector('.inputHeight'); //輸入身高處
 var inputWeight = document.querySelector('.inputWeight'); //輸入體重處
 
 var data = JSON.parse(localStorage.getItem('BMIData')) || []; // 獲取localStorage的資料
 var list = document.querySelector('.resultBar'); // 用於更新list中的資料
 
-var changeBtn = document.querySelector('.sendData'); // 用於更換按鈕樣式
+var changeBtn = document.querySelector('.send'); // 用於更換按鈕樣式
 
 // 監聽
 send.addEventListener('click', addData); // list新增資料
@@ -25,6 +25,9 @@ function addData(e){
     var weight = inputWeight.value;
     var BMI = calculateBMI();
     var time = getTime();
+
+    console.log(height);
+    console.log(weight);
 
     // 若有小數點，則身高、體重取至小數點第一位
     if (height % 1 != 0){
@@ -63,27 +66,27 @@ function updateList(itmes){
 
         // 過輕 2
         if (temp < 18.5){
-            content = '<li><div class="resultColor2"></div><div class="resultShow"><div class="resultTitle2">過輕</div><div class="resultHeight2"><div class="resultUnit2">Height</div><div class="resultFigure2">' + height +'cm</div></div><div class="resultWeight2"><div class="resultUnit2">Weight</div><div class="resultFigure2">' + weight + 'kg</div></div><div class="resultBMI2"><div class="resultUnit2">BMI</div><div class="resultFigure2">' + temp + '</div></div><div class="currentTime">' + currentDateTime + '</div><div class="deleteBtn"><a data-num="'+ i +'">X</a></div></div></li>';
+            content = '<li style="border-color: #31BAF9;"><div>過輕</div><div><p>BMI </p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
         }
         // 理想 1
         else if (temp >= 18.5 && temp < 24){
-            content = '<li><div class="resultColor1"></div><div class="resultShow"><div class="resultTitle1">理想</div><div class="resultHeight1"><div class="resultUnit1">Height</div><div class="resultFigure1">' + height +'cm</div></div><div class="resultWeight1"><div class="resultUnit1">Weight</div><div class="resultFigure1">' + weight + 'kg</div></div><div class="resultBMI1"><div class="resultUnit1">BMI</div><div class="resultFigure1">' + temp + '</div></div><div class="currentTime">' + currentDateTime + '</div><div class="deleteBtn"><a data-num="'+ i +'">X</a></div></div></li>';
+            content = '<li style="border-color: #86D73F;"><div>理想</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
         }
         // 過重 3
         else if (temp >= 24 && temp < 27){
-            content = '<li><div class="resultColor3"></div><div class="resultShow"><div class="resultTitle3">過重</div><div class="resultHeight3"><div class="resultUnit3">Height</div><div class="resultFigure3">' + height +'cm</div></div><div class="resultWeight3"><div class="resultUnit3">Weight</div><div class="resultFigure3">' + weight + 'kg</div></div><div class="resultBMI3"><div class="resultUnit3">BMI</div><div class="resultFigure3">' + temp + '</div></div><div class="currentTime">' + currentDateTime + '</div><div class="deleteBtn"><a data-num="'+ i +'">X</a></div></div></li>';
+            content = '<li style="border-color: #FF982D;"><div>過重</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
         }
         // 輕度肥胖 4
         else if (temp >= 27 && temp < 30){
-            content = '<li><div class="resultColor4"></div><div class="resultShow"><div class="resultTitle4">輕度肥胖</div><div class="resultHeight4"><div class="resultUnit4">Height</div><div class="resultFigure4">' + height +'cm</div></div><div class="resultWeight4"><div class="resultUnit4">Weight</div><div class="resultFigure4">' + weight + 'kg</div></div><div class="resultBMI4"><div class="resultUnit4">BMI</div><div class="resultFigure4">' + temp + '</div></div><div class="currentTime">' + currentDateTime + '</div><div class="deleteBtn"><a data-num="'+ i +'">X</a></div></div></li>';
+            content = '<li style="border-color: #FF6C03;"><div>輕度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
         }
         // 中度肥胖 5
         else if (temp >= 30 && temp < 35){
-            content = '<li><div class="resultColor5"></div><div class="resultShow"><div class="resultTitle5">中度肥胖</div><div class="resultHeight5"><div class="resultUnit5">Height</div><div class="resultFigure5">' + height +'cm</div></div><div class="resultWeight5"><div class="resultUnit5">Weight</div><div class="resultFigure5">' + weight + 'kg</div></div><div class="resultBMI5"><div class="resultUnit5">BMI</div><div class="resultFigure5">' + temp + '</div></div><div class="currentTime">' + currentDateTime + '</div><div class="deleteBtn"><a data-num="'+ i +'">X</a></div></div></li>';
+            content = '<li style="border-color: #FF6C03;"><div>中度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div><p>Weight</p><h2>'+ weight +'kg</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
         }
         // 重度肥胖 6
         else if (temp > 35){
-            content = '<li><div class="resultColor6"></div><div class="resultShow"><div class="resultTitle6">重度肥胖</div><div class="resultHeight6"><div class="resultUnit6">Height</div><div class="resultFigure6">' + height +'cm</div></div><div class="resultWeight6"><div class="resultUnit6">Weight</div><div class="resultFigure6">' + weight + 'kg</div></div><div class="resultBMI6"><div class="resultUnit6">BMI</div><div class="resultFigure6">' + temp + '</div></div><div class="currentTime">' + currentDateTime + '</div><div class="deleteBtn"><a data-num="'+ i +'">X</a></div></div></li>';
+            content = '<li style="border-color: #FF1200;"><div>重度肥胖</div><div><p>BMI</p><h2>'+ temp +'</h2></div><div><p>Height</p><h2>'+ Height +'kg</h2></div><div><p>Height</p><h2>'+ height +'cm</h2></div><div style="font-size: 0.75rem">'+ currentDateTime +'</div><a class="delBtn">Delete</a></li>'
         };
 
         str += content;
@@ -113,27 +116,27 @@ function updateBTN(){
         if (!BMI){return};
         // 過輕 2
         if (BMI < 18.5){
-            str = '<div class="sendBtn2"><div class="sendBtnBMI2">'+ BMI +'</div><div class="sendBtnText2">BMI</div><div class="sendBtnImg2" ><img src="icons_loop.png"></div></div><div class="fixBtnlocation2">過輕</div>'
+            str = '<div class="result1"><h1>過輕</h1><h1 class="resultBMI">'+ BMI +'</h1><div class="loop" ><img src="./img/icons_loop.png"></div></div>'
         }
         // 理想 1
         else if (BMI >= 18.5 && BMI < 24){
-            str = '<div class="sendBtn1"><div class="sendBtnBMI1">'+ BMI +'</div><div class="sendBtnText1">BMI</div><div class="sendBtnImg1" ><img src="icons_loop.png"></div></div><div class="fixBtnlocation1">理想</div>'
+            str = '<div class="result2"><h1>理想</h1><h1 class="resultBMI">'+ BMI +'</h1><div class="loop" ><img src="./img/icons_loop.png"></div></div>'
         }
         // 過重 3
         else if (BMI >= 24 && BMI < 27){
-            str = '<div class="sendBtn3"><div class="sendBtnBMI3">'+ BMI +'</div><div class="sendBtnText3">BMI</div><div class="sendBtnImg3" ><img src="icons_loop.png"></div></div><div class="fixBtnlocation3">過重</div>'
+            str = '<div class="result3"><h1>過重</h1><h1 class="resultBMI">'+ BMI +'</h1><div class="loop" ><img src="./img/icons_loop.png"></div></div>'
         }
         // 輕度肥胖 4
         else if (BMI >= 27 && BMI < 30){
-            str = '<div class="sendBtn4"><div class="sendBtnBMI4">'+ BMI +'</div><div class="sendBtnText4">BMI</div><div class="sendBtnImg4" ><img src="icons_loop.png"></div></div><div class="fixBtnlocation4">輕度肥胖</div>'
+            str = '<div class="result4"><h1>輕度肥胖</h1><h1 class="resultBMI">'+ BMI +'</h1><div class="loop" ><img src="./img/icons_loop.png"></div></div>'
         }
         // 中度肥胖 5
         else if (BMI >= 30 && BMI < 35){
-            str = '<div class="sendBtn5"><div class="sendBtnBMI5">'+ BMI +'</div><div class="sendBtnText5">BMI</div><div class="sendBtnImg5" ><img src="icons_loop.png"></div></div><div class="fixBtnlocation5">中度肥胖</div>'
+            str = '<div class="result5"><h1>中度肥胖</h1><h1 class="resultBMI">'+ BMI +'</h1><div class="loop" ><img src="./img/icons_loop.png"></div></div>'
         }
         // 重度肥胖 6
         else if (BMI > 35){
-            str = '<div class="sendBtn6"><div class="sendBtnBMI6">'+ BMI +'</div><div class="sendBtnText6">BMI</div><div class="sendBtnImg6" ><img src="icons_loop.png"></div></div><div class="fixBtnlocation6">重度肥胖</div>'
+            str = '<div class="result6"><h1>重度肥胖</h1><h1 class="resultBMI">'+ BMI +'</h1><div class="loop" ><img src="./img/icons_loop.png"></div></div>'
         };
 
     changeBtn.innerHTML = str;

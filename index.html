@@ -5,49 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div class="container">
-        <!-- 輸入區 -->
-        <div>
-            <div class="head">
-                <div class="logoBMI">
-                    <div class="fixBMIlocation"></div>
-                    <img src="BMICLogo.png">
-                </div>
-                <div class="inputData">
-                    <div>
-                        <div class="inputContent">身高 cm</div>
-                        <input type="text" placeholder="請輸入身高" class="inputHeight" oninput ="decimalPoint(this)">
-                    </div>
+    <section id="container">
 
-                    <div>
-                        <div class="inputContent">體重 kg</div>
-                        <input type="text" placeholder="請輸入體重" class="inputWeight" oninput ="decimalPoint(this)">
-                    </div>
-                </div>
-                <div class="sendData">
-                    <div class="sendBtn">
-                        <span class="sendBtnText">看結果</span>
-                    </div>
-                    <div class="fixBtnlocation"></div>
-                </div>
-
+        <!-- Header -->
+        <div class="header">
+            <img src="./img/BMICLogo.png" class="logo ">
+            <div class="inputData ">
+                <p>身高 cm</p>
+                <input type="text" placeholder="請輸入身高" class="inputHeight"  oninput ="decimalPoint(this)">
+                <p>體重 kg</p>
+                <input type="text" placeholder="請輸入體重" class="inputWeight"  oninput ="decimalPoint(this)">
             </div>
+            <div class="send ">
+                <div class="original"><h1>看結果</h1></div>  
+            </div>
+            <!-- <div class="result">
+                <h1>理想</h1>
+                <h1 class="resultBMI">20.90</h1>
+                <div class="loop" ><img src="./img/icons_loop.png"></div>
+            </div> -->
         </div>
-        <!-- 資料區 -->
-        <div class="resultArea">
-            <div class="listTitle">BMI 紀錄</div>
+
+        <!-- Display Result -->
+        <div class="content">
+            <h1>BMI紀錄</h1>
             <ul class="resultBar"></ul>
         </div>
-        <!-- 底部Bar -->
-        <div class="bottomBar">
-            <div class="logoBottom">    
-                <img class="pic" src="BMICLogo.png">
-            </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footImg"><img src="./img/BMICLogo.png"></div>
         </div>
-    </div>
-    <script src="all.js"></script>
+
+    </section>
+
+    <script src="./all.js"></script>
 </body>
 </html>
